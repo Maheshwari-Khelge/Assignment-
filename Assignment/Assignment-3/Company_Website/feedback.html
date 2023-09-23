@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(./img/Frame_9.webp);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.html">Valtech</a></h1>
+          <ul>
+            <li><a class="current" href="feedback.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
+    <H1>Feedback Form</H1>
+    <FORM " method="post" enctype="text/plain">
+      First Name : <INPUT type="text" name="firstname" >
+      Second Name : <INPUT type="text" name="secondname" >
+      <BR>
+      <BR>
+      <!--It's important that both of these radio button have the same name so they behave as one component (i.e. Only one can be selected at a time)-->  
+      <INPUT type="radio" name="gender" value="male">Male<BR>
+      <INPUT type="radio" name="gender" value="female">Female  
+      <BR>
+      <BR>
+      <!--This uses the new HTML "email" INPUT type which will automatically validates the email address when the SUBMIT button is clicked-->
+      email: <INPUT type="email" name="mail" >
+      <BR>
+      <BR>
+        Comment :<BR>        
+        <TEXTAREA rows="6" cols="50" name="commentfield"></TEXTAREA>
+        <BR>
+       
+        <BR>
+        <INPUT TYPE="submit" value="Send Feedback">
+        
+    </FORM>
+    
+</body>
+</html>

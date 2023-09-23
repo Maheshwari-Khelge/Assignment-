@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diwali Greeting</title>
+  <style>
+    canvas {
+        border: 2px solid #000000;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body>
+  <canvas width="800" height="800" id="can"></canvas>
+  <script>
+    var ctx = document.getElementById("can").getContext("2d");
+     var gradient = ctx.createLinearGradient(0, 0, 800, 800);
+        gradient.addColorStop(0, 'skyblue'); // Orange
+        gradient.addColorStop(1, '#ff0000'); // Red
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 800, 800);
+  //Create Stars
+  function drawStar(x,y,radius,spikes,color){
+    var rot = (Math.PI/2)*3;
+    var x1 = x;
+    var y1 = y;
+    var step = Math.PI/spikes;
+    var r = Math.round(Math.random() * 255);
+    var g = Math.round(Math.random() * 255);
+    var b = Math.round(Math.random() * 255);
+    var a = Math.random();
+    ctx.beginPath();
+    ctx.moveTo(x,y-radius);
+    for(var i=0;i<spikes;i++){
+      x1 = x+Math.cos(rot) * radius;
+      y1 = y+Math.sin(rot) * radius;
+      ctx.lineTo(x1,y1);
+      rot += step;
+
+      x1 = x+Math.cos(rot)*(radius/2);
+      y1 = y+Math.sin(rot)*(radius/2);
+      ctx.lineTo(x1,y1);
+      rot += step;
+
+    }
+    ctx.lineTo(x,y-radius);
+    ctx.closePath();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = color;
+    ctx.stroke();
+    ctx.fillStyle = "rgba("+r+","+g+","+b+","+a+")";
+    //ctx.fillStyle = "#335FFF";
+    ctx.fill();
+
+  }  
+
+  drawStar(100, 100, 20, 11, '#ffffff');
+  drawStar(200, 150, 30, 10, '#ffffff');
+  drawStar(300, 200, 25, 9, '#ffffff');
+  drawStar(700, 100, 20, 9, '#ffffff');
+  drawStar(600, 150, 30, 10, '#ffffff');
+  drawStar(500, 200, 25, 11, '#ffffff');
+  
+  // Create rockets
+  function drawRocket(x, y) {
+          var r = Math.round(Math.random() * 255);
+          var g = Math.round(Math.random() * 255);
+          var b = Math.round(Math.random() * 255);
+          var a = Math.random();
+          ctx.fillStyle = "rgba("+r+","+g+","+b+","+a+")";
+            
+            ctx.fillRect(x, y, 10, 40);
+            ctx.fillStyle = "rgba("+r+","+g+","+b+","+a+")";
+            
+            ctx.beginPath();
+            ctx.moveTo(x - 5, y);
+            ctx.lineTo(x + 15, y);
+            ctx.lineTo(x + 5, y - 20);
+            ctx.fill();
+        }
+
+        drawRocket(50, 350);
+        drawRocket(200, 300);
+        drawRocket(400, 350);
+        drawRocket(600, 350);
+        drawRocket(700, 300);
+        drawRocket(600, 350);
+ 
+
+  // Add Diwali Greeting message
+  ctx.font = '50px Solid ';
+        ctx.fillStyle = '#64FF33';
+        ctx.fillText('Happy Diwali!', 250, 550);
+       ctx.font="30px arial"
+        ctx.fillText("Festivals of lights",270,600);
+  </script>
+
+</body>
+</html>

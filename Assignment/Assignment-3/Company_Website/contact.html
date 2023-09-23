@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>label</title>
+    <style>
+        body{
+            background-image: url(./img/rgr.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form{
+            background-color: blanchedalmond;
+           text-align:left;
+            display: block;
+            margin-left: 400px;
+            padding-top: 40px;
+            padding-left:40px;
+            border:2px solid black;
+            margin-top: 60px;
+           
+          
+            margin:100px,auto;
+            width: 500px;
+            height:700px;
+        }
+        
+        h1{
+            text-align: center;
+            background-color:blanchedalm;
+            display: block;
+            color: black;
+            margin-top: 40px;
+        }
+        #submit
+        {
+           float: inline-start;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+          <div class="container">
+            <h7 class="logo"><a href="index.html">Valtech</a></h7>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="current" href="contact.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <h1>Contact Details:</h1>
+
+        <form>
+            <label for="firstname" id="firstName" >FirstName</form>
+        <input type="text" name="FirstName">
+        <br>
+        <br>
+        <label for="lastname" id="LastName" >LastName</label>
+        <input type="text" name="FirstName">
+        <br>
+        <br>
+        <label for="gmail" id="Gmail" >Gmail</label>
+        <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" name="Gmail">
+        <br>
+        <br>
+        
+       <label for="gender" id="gender">Gender</label>
+       <input type="radio" name="male" />Male
+       <input type="radio" name="male" />Female
+       <input type="radio" name="male" />Others
+
+        <br>
+        <br>
+
+        <label for="age" id="age">Age</label>
+        <input type="number" min="26" max="90" name="uage" id="uage"/>
+        <br>
+        <br>
+
+        <label for="city" id="city" name="city">City of Birth</label>
+        <select name="city" id="ucity">
+            <option value="Banglore">Banglore</option>
+            <option value="Jaipur" selected>Jaipur </option>
+            <option value="Sampalpur">Sambalpur</option>
+            <option value="Manglore">Manglore</option>
+            <option value="Patna">Patna</option>
+            <option value="Srinagar" >Srinagar </option>
+            <option value="Kanpur">Kanpur</option>
+            <option value="Guwahati">Guwahati</option>
+            <option value="Hassan">Hassan</option>
+            <option value="Ramnagar" >Ramnagar </option>
+            <option value="Bidar">Bidar</option>
+            <option value="Tumkur">Tumkur</option>
+            <!-- //eveloper, designer, testing engineer, sales support, HR -->
+
+        </select>
+        <br>
+        <br>
+        <label for="file" id="file">Select your Resume:</label>
+        <input accept=".doc,.docx,.pdf" type="file" id="myfile" name="myfile"><br><br>
+
+        <label for="Postion" id="position" name="position">Position Applying for</label><br>
+        <input type="checkbox" id="Developer" name="Developer" value="Developer">
+        <label for="Developer"> Developer</label><br>
+        <input type="checkbox" id="Designer" name="Designer" value="Designer">
+        <label for="Designer"> Designer</label><br>
+        <input type="checkbox" id="Testing-Engineer" name="Testing-Engineer" value="Test engineer">
+        <label for="Testing-Engineer">Testing-Engineer</label><br>
+        <input type="checkbox" id="Sales support" name="Sales support" value="sales-support">
+        <label for="Sales support"> Sales support</label><br>
+        <input type="checkbox" id="HR" name="HR" value="HR">
+        <label for="HR"> HR</label>
+        <br>
+        <br>
+
+        <label for="Date" id="Date">Tentative Joining-Date</label>
+        <input type="Date" name="date">
+       
+        <br>
+        <br>
+       <button type="button" onclick="saveFormData()">Save</button>
+        </form>
+        <script>
+        function saveFormData(){
+           
+         
+            
+               var name = document.getElementById("firstName").value;  
+               var LastName = document.getElementById("LastName").value;   
+               var Gmail = document.getElementById("Gmail").value;  
+               var gender = document.getElementById("gender").value;  
+               var age = document.getElementById("age").value;  
+               var city = document.getElementById("city").value;  
+               var file = document.getElementById("file").value;  
+               var position = document.getElementById("position").value; 
+               var Date = document.getElementById("Date").value;  
+
+                gender.checked ? gender="male" : gender="female";
+                 
+                
+               localStorage.setItem("firstName",name);
+               localStorage.setItem("LastName",LatName);
+               localStorage.setItem("Gmail",Gmail);
+               localStorage.setItem("gender",gender);
+               localStorage.setItem("age",age);
+               localStorage.setItem("city",city);
+               localStorage.setItem("file",file);
+               localStorage.setItem("position",position);
+               localStorage.setItem("Date",Date);
+               alert("user info is stored");
+            }
+        
+        </script>
+</body>
+</html>

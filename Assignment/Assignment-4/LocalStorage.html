@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+        text-align: center;
+        background-color: antiquewhite;
+        
+    }
+    form{
+        background-color: white;
+        width:600px;
+        height:600px;
+        padding-top: 50px;
+        margin-left: 350px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+
+    <form id="myForm">
+        <label for="firstname">FirstName:</label>
+        <input type="text" id="firstname" name="firstname"><br><br>
+
+        <label for="lastname">LastName:</label>
+        <input type="text" id="lastname" name="lastname"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="age">Age: </label>
+    <input type="number" id="age" name="age" required min="18"><br><br>
+
+    <label for="cityOfBirth">City Of Birth :</label>
+    <select id="cityOfBirth" name="cityOfBirth" required>
+        <option value="bangalore">Bangalore</option>
+        <option value="jaipur">Jaipur</option>
+        <option value="sambalpur">Sambalpur</option>
+        <option value="mangalore">Mangalore</option>
+        <option value="patna">Patna</option>
+        <option value="srinagar">Srinagar</option>
+        <option value="kanpur">Kanpur</option>
+        <option value="guwahati">Guwahati</option>
+        <option value="hassan">Hassan</option>
+        <option value="ramnagar">Ramnagar</option>
+        <option value="bidar">Bidar</option>
+        <option value="tumkur">Tumkur</option>
+    </select><br><br>
+
+    <label for="resume">Select Your Resume (PDF, DOC, or DOCX): </label>
+    <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required><br><br>
+
+    <label for="joiningDate">Tentative Joining Date:</label>
+    <input type="date" id="joiningDate" name="joiningDate"><br><br>
+
+    <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Check if the browser is online or offline
+        function isOnline() {
+            return navigator.onLine;
+        }
+
+        // Save form data to local storage
+        function saveFormDataLocally(formData) {
+            localStorage.setItem('offlineFormData', JSON.stringify(formData));
+        }
+
+        // Event listener for form submission
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+
+            var firstname = document.getElementById('firstname').value;
+            var lastname = document.getElementById('lastname').value;
+            var email = document.getElementById('email').value;
+            var age = document.getElementById('age').value;
+            var cityOfBirth = document.getElementById('cityOfBirth').value;
+            var resume = document.getElementById('resume').value;
+            var joiningDate = document.getElementById('joiningDate').value;
+
+            var formData = {
+              firstname,lastname,email,age,cityOfBirth,resume,joiningDate
+                
+            };
+
+            if (isOnline()) {
+                // If online, you can send the form data to a server here
+                // Example: You can use fetch() or an AJAX library to send data to a server
+                console.log('Form submitted online:', formData);
+            } else {
+                // If offline, save the form data locally
+                saveFormDataLocally(formData);
+                console.log('Form data saved locally:', formData);
+            }
+
+            // Reset the form
+            document.getElementById('myForm').reset();
+        });
+
+        // Check if there is locally stored form data and try to submit it when back online
+        window.addEventListener('online', function () {
+            const storedData = localStorage.getItem('offlineFormData');
+
+            if (storedData) {
+                const formData = JSON.parse(storedData);
+
+                // You can now send the stored form data to the server
+                // Example: Use fetch() or an AJAX library to send data to a server
+                console.log('Submitting stored form data online:', formData);
+
+                // Clear the locally stored data
+                localStorage.removeItem('offlineFormData');
+            }
+        });
+    </script>
+</body>
+</html>
