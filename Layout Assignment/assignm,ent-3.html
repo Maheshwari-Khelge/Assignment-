@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Flex</title>
+    <style>
+    body{
+        border:2px solid black;
+        width:720px;
+        height:630px;
+        overflow:auto;
+        text-align: center;
+        
+    }
+    
+   #x{
+        background-color: yellow;
+        border:2px solid black;
+        margin: 20px;
+        width:660px;
+        height: 50px;
+        font-size: 25px;
+        text-align: center;
+        padding:5px;
+        line-height: 50px;
+    }
+    .nav{
+        background-color: rgb(121, 246, 11);
+        border: 2px solid black;
+        margin: 20px;
+        width:660px;
+        height: 50px;
+        text-align: center;
+        font-size: 20px;
+        padding:5px;
+        line-height: 50px;
+    }
+    .container
+    {
+        display:flex;
+        flex-direction: row;
+    }
+    .container{
+            
+             flex-grow:1;
+            flex-shrink:1;
+    }
+    main{
+        background-color: bisque;
+        width:450px;
+        height:300px;
+        border:2px solid black;
+        margin:20px;
+    }
+    aside{
+        background-color: grey;
+        margin-left:20px;
+        width:180px;
+        height:300px;
+        border:2px solid black;
+        margin:20px;
+    }
+    footer
+    {
+        background-color: palegoldenrod;
+        border: 2px solid black;
+        margin: 20px;
+       width:660px;
+       height: 50px;
+       font-size:25px;
+       text-align: center;
+       line-height: 50px;
+    }
+    
+    .section
+    {
+        margin-left:20px;
+        margin-top:5px;
+    }
+   
+
+    section {
+      background-color: grey;
+      text-align: left;
+      height:220px;
+      width: 400px;
+      margin-left: 20px;
+      
+
+    }
+    section header{
+        background-color: yellow;
+        border:2px solid black;
+        margin:10px;
+        height:30px;
+        text-align:center;
+        
+    
+
+    }
+    
+    section article{
+        background-color: azure;
+        border:2px solid black;
+        margin:10px;
+        height:30px;
+        text-align:center;
+    }
+    .aside
+    {
+        border:1px solid black;
+        background-color: yellow;
+        margin:5px;
+        height:30x;
+        border: 2px solid black;
+    }
+    main h3{
+        font-size:20px
+    }
+   section h4,aside h4{
+    margin-left: 10px;
+    margin-top:20px;
+    font-size: 20px;
+   }
+</style>
+</head>
+<body>
+    <div id="x">
+        <b>Header</b>
+        </div>
+        <div class="nav">
+        <b>Nav</b>
+         </div>
+         <div class="container">
+             <main>
+                 <h3><b>Main</b></h3>
+                 <section>
+                     <h4>Section</h4>
+                 <header>Header</header>
+                 <article>Article</article>
+                 <article>Article</article>
+                 <article>Article</article>
+                 </section>
+             </main>
+             <aside>
+                 <h4>Aside</h4>
+                 <div class="aside">Header</div>
+             </aside>
+         </div>
+         <footer id="footer"><b>Footer</b></footer>
+</body>
+</html>
