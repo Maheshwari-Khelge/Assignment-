@@ -1,0 +1,2 @@
+->Still i found bit difficulty in  arranging the objects in order(flex direction).
+->i couln't able to fix the images in all construction planning seperately.
