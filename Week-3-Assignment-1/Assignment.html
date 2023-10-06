@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #searchInput {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: skyblue;
+        }
+        #paragraph {
+            overflow: auto;
+            font-size: 20px;
+            /* background:url(cricket.jpg) ;
+            background-size: cover; */
+        }
+
+    </style>
+    <script>
+    function searchAndHighlight() {
+    var searchTerm = document.getElementById("searchInput").value;
+    var paragraph = document.getElementById("paragraph");
+
+     var html = paragraph.innerHTML.replace(/<mark>|<\/mark>/g,'');
+    var regex = new RegExp(searchTerm, "gi");
+    html = html.replace(regex, function(match) {
+    return "<mark>" + match + "</mark>";
+   });
+
+    paragraph.innerHTML = html;
+
+}
+
+    </script>
+</head>
+<body>
+    <label for="text" ><b>Type Here>></b></label>
+    <input type="text" id="searchInput">
+    <button onclick="searchAndHighlight()" type="button" >search</button>
+    <div id="paragraph">
+        As Cricket has various formats, it has a different fan base for each of them. Some people like watching test matches because of their intensity and authenticity. While some enjoy Twenty-20, that require minimum engagement and are highly entertaining. Test Match is a format of cricket that is quite traditional.
+          It lasts up to five days and two countries play against each other in this match. Next up, we have the National League Systems, also called counties in England. Their duration is for three to four days.
+          Limited Overs Cricket is another type where the number of episodes decides the format and length of the game. Both the teams get to play a single inning and thus results are determined.However, if it rains, they apply the Duck worth- Lewis Method to attain results. One of the most common formats is One Day International also known as ODI. Two countries play against each other for a total of fifty overs. Finally, this is probably the most entertaining format of cricket, the Twenty-20. It only has 20 overs to play and is quite exciting and engaging.Get the huge list of more than 500 Essay Topics and IdeasThe Power of Cricket in India
+          Despite Hockey being the national sport of the country, it is cricket which rules over the hearts of the citizens. It creates a lot of excitement and frenzy amongst the fans of the game. Cricket is like a religion in India and the players are considered to be demi-gods. It is the most-watched sport in India and people even miss their schools and offices when any major international match is happening.</p>
+
+
+    </div>
+</body>
+</html>
