@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        /* .container{
+            width: 600px;
+            height: 400px;
+            padding: 10px;
+            margin: auto;
+            font-family: sans-serif;
+            text-align: justify;
+            overflow: auto;
+            background-color: silver;
+            border: 1px solid grey;
+        } */
+        button{
+            width: 200px;
+            margin : auto;
+            margin-bottom: 20px;
+            display: block;
+        }
+       /* .container button{
+            width: 90%;
+            margin : auto;
+            margin-bottom: 10px;
+            display: block;
+        } */
+    </style>
+    <script src="lib/jquery.3.7.1.js"></script>
+    <script>
+       
+       var tempdata = {};
+       $(()=>{
+            $.getJSON("data/data.json", function(data, status, jqxhr){
+                tempdata = data;
+                $(data.herolist).each(function(idx,val){
+                $(".hlist").append(`<option value="${idx}">${val.title}</option>`)
+                })
+            });
+            $(".box").on("click","button",function(evt){
+               // alert("button was clicked");
+               $(evt.target).next().removeAttr("hidden");
+                 
+            })
+           
+            $(".hlist").on("change",function(evt){
+               // console.log(evt.target.value);
+               var selectedHeroIndex = evt.target.value;
+                var selectedhero = tempdata.herolist[selectedHeroIndex];
+                var selectedHeroMovies = selectedhero.movieslist;
+            
+
+             $(".box").html(`
+
+                <div class="card" style="width: 18rem;">
+                <img src="${selectedhero.poster.replace('assets/images','images/')}" class="card-img-top" alt="${selectedhero.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${selectedhero.title}</h5>
+                    <p class="card-text">
+                        Full Name : ${selectedhero.firstname +" "+selectedhero.lastname}
+                        <br/>
+                        Release on : ${selectedhero.releasedate}
+                        <br/>
+                        Ticket Price : ${selectedhero.ticketprice}
+                        <br/>
+                        City : ${selectedhero.city}
+                    </p>
+                    <button class="btn btn-primary movies">Movies</button>
+                    <div hidden class="card" style="width: 100%">
+                        <ul class="list-group list-group-flush">
+                            ${selectedHeroMovies.map(movie => `<button class="list-group-item">${movie.title}</button>
+                                                               <img src="${movie.poster.replace('assets/images','images/')}">
+                            `).join('')}
+                            
+                        </ul>
+                   </div>
+                </div>
+                </div>
+                `)
+            })
+        }) 
+        
+
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <select class="hlist">
+            <option>default</option>
+        </select>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+
+
+
