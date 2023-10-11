@@ -1,0 +1,198 @@
+{
+"User" : [
+    {"mobile":"9019074743", "imei":"2322718289812","service-provider":"Airtel","network-status":"good", "battery=status":"48","Address":"Banglore","Health-conditions":"Asthma"},
+    {"mobile":"8919074743", "imei":"8922718289812","service-provider":"Jio","network-status":"average", "battery=status":"98","Address":"Mysore","Health-conditions":"cancer"},
+    {"mobile":"7339074743", "imei":"8302094820231","service-provider":"BSNL","network-status":"great", "battery=status":"11","Address":"Hampi","Health-conditions":"High Bp"},
+    {"mobile":"6339074743", "imei":"9123911820231","service-provider":"Idea","network-status":"poor", "battery=status":"53","Address":"Bidar","Health-conditions":"Diabetes"},
+    {"mobile":"9002900743", "imei":"2162626820231","service-provider":"Vodafone","network-status":"very poor", "battery=status":"10","Address":"Manglore","Health-conditions":"Chronic Disease"}
+
+
+],
+"Location" : [
+    
+    {"Name":"Lalbhagh","lat": "12.9507° N","long": "77.5848° E", "poster":"images/Lalbhagh.jpg",
+    "Place" :[
+    {
+    "TypeOfPlace":"Park",
+    "from-timing":"9AM",
+    "To-Timing":"6PM",
+    "DressCode":"Any",
+    "Enterance-Fee":"40 Rupees",
+    "special-instruction":"You would be astonished to know that the rocks of the entry area of Lalbagh are some of the oldest in earth. Please take time and visit not just the botanical preserve but a geological as well."
+     }
+]
+},
+
+
+{"Name":"Dharmastala","lat": "12.9546° N","long": "75.3811° E","poster":"images/Dharmasthala.jpg",
+    "Place": [
+        {
+    "TypeOfPlace":"Religious",
+    "from-timing":"4AM",
+    "To-Timing":"8PM",
+    "DressCode":"Tradditional",
+    "Enterance-Fee":"free",
+    "special-instruction":"men with night pant and women with nighies are not allowed inside"
+}
+]
+},
+
+{"Name":"Hampi","lat": "15.3350° N","long": "76.4600° E","poster":"images/Hampi.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Historical",
+"from-timing":"4AM",
+"To-Timing":"10PM",
+"DressCode":"Any",
+"Enterance-Fee":"free",
+"special-instruction":" it is highly recommended to hire a guide to help understand the magic and grandeur of Hampi by explaining its history and associated legends."
+}
+]
+},
+{"Name":"Savandurga Hill","lat": "12.9206° N","long": "77.2944° E","poster":"images/Savandurga.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Adventerous",
+"from-timing":"10AM",
+"To-Timing":"5PM",
+"DressCode":"Any",
+"Enterance-Fee":"free",
+"special-instruction":" Take a water bottle and have a good trekking shoes."
+}
+]
+},
+{"Name":"Lulu HyperMarket","lat": "12.9817° N","long": "77.5638° E","poster":"images/Lulu.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Shopping",
+"from-timing":"10AM",
+"To-Timing":"11PM",
+"DressCode":"Any",
+"Enterance-Fee":"free",
+"special-instruction":" Lulu Mall encourages creativity by hosting art and craft workshops."
+}
+]
+},
+{"Name":"Malpe Beach","lat": "13.3555° N","long": "74.7044° E","poster":"images/Malpe-Beach.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Beach",
+"from-timing":"7AM",
+"To-Timing":"5PM",
+"DressCode":"Loose tank dress",
+"Enterance-Fee":"free",
+"special-instruction":" Always swim in a lifeguarded area."
+}
+]
+},
+{"Name":"Mysore-Palace","lat": "12.3052° N","long": "76.6552° E","poster":"images/Mysore.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Historical",
+"from-timing":"10AM",
+"To-Timing":"5:30PM",
+"DressCode":"Any",
+"Enterance-Fee":"100 Rupees",
+"special-instruction":" Entrance to Palace for Tourists from three Gates :: Varaha and Amba Vilas Gate at South and Jayarama Balarama Gate at North."
+}
+]
+},
+{"Name":"Dandeli","lat": "15.2361° N","long": "74.6173° E","poster":"images/Dandeli.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Adventerous",
+"from-timing":"6AM",
+"To-Timing":"10PM",
+"DressCode":"wear layers of clothes rather than one thick sweater or windcheater.",
+"Enterance-Fee":"500 rupees",
+"special-instruction":" Flash and spot lights for photography are prohibited so as to prevent startling animals."
+}
+]
+},
+{"Name":"Bannerghatta National Park","lat": "12.8010° N","long": "77.5775° E","poster":"images/Bannerghatta.jpg",
+"Place" :[
+{
+"TypeOfPlace":"Park",
+"from-timing":"9:30AM",
+"To-Timing":"5PM",
+"DressCode":"Wear comfortable shoes, carry a backpack, water bottle, hat",
+"Enterance-Fee":"80 Rupees",
+"special-instruction":"Maintain peace & silence within the Park."
+ }
+]
+},
+{"Name":"Mantri Square","lat": "12.9916° N","long": "77.5712° E","poster":"images/Mantri.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Shopping",
+"from-timing":"10AM",
+"To-Timing":"11PM",
+"DressCode":"Any",
+"Enterance-Fee":"free",
+"special-instruction":" The mall is one of the coolest hangout spots for everyone looking to have an enjoyable day with their loved ones."
+}
+]
+},
+{"Name":"Juhu Beach","lat": "11.3555° N","long": "73.7044° E","poster":"images/juhu.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Beach",
+"from-timing":"7AM",
+"To-Timing":"5PM",
+"DressCode":"Loose tank dress",
+"Enterance-Fee":"free",
+"special-instruction":" Always swim in a lifeguarded area."
+}
+]
+},
+{"Name":"Tasty-Paradise","lat": "12.3055° N","long": "71.7944° E","poster":"images/Tasty Paradise.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Food Places",
+"from-timing":"7AM",
+"To-Timing":"11PM",
+"DressCode":"Any",
+"Enterance-Fee":"free",
+"special-instruction":" If you have an allergy, tell the restaurant up front"
+}
+]
+},
+{"Name":"RR Vatika","lat": "12.4000° N","long": "61.7944° E","poster":"images/RRvatika.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Food Places",
+"from-timing":"7AM",
+"To-Timing":"11PM",
+"DressCode":"Any",
+"Enterance-Fee":"free",
+"special-instruction":" Taste first, season second."
+}
+]
+},
+{"Name":"Kedarbath","lat": "10.4000° N","long": "41.7944° E","poster":"images/kedarnath.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Religious",
+"from-timing":"7AM",
+"To-Timing":"9PM",
+"DressCode":"Tradditional dress",
+"Enterance-Fee":"free",
+"special-instruction":" It is advisable to avoid harsh winter and monsoon months.."
+}
+]
+},
+{"Name":"Cubbon Park","lat": "14.4000° N","long": "21.7944° E","poster":"images/Cubbon Park.jpg",
+"Place": [
+    {
+"TypeOfPlace":"Park",
+"from-timing":"7AM",
+"To-Timing":"10PM",
+"DressCode":"Any",
+"Enterance-Fee":"50 rupees",
+"special-instruction":" Use dustbins to through plastic bottles."
+}
+]
+}
+
+]
+}

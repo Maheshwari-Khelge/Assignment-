@@ -1,0 +1,66 @@
+
+  #navbar {
+    background: rgb(131, 121, 121);
+    color: rgb(246, 245, 245);
+    overflow:auto;
+  }
+  
+  #navbar a {
+    color:aliceblue;
+    
+  }
+  
+  #navbar h1 {
+    float: left;
+    padding-top: 10px;
+    color:white;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    float: right;
+  }
+  
+  #navbar ul li {
+    float: left;
+    padding-top:5px;
+  }
+  
+  #navbar ul li a {
+    display:inline;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #navbar ul li a:hover, 
+  #navbar ul li a.current {
+    background: #444;
+    color: #f7c08a;
+   }
+   #UserPage {
+    height:600px;
+    width:300px;
+    margin-left:500px;
+    margin-right: auto;
+   }
+   
+   .container
+   {
+   background:url("../images/Hom1.webp");
+   background-size: cover;
+   }
+   #btn {
+    border-radius: 4px;
+    height:30px;
+    width:90px;
+   font-size: 16px;
+   margin-left: 100px;
+   margin-top: 20px;
+   }
+   #btn:hover {
+    background-color: rgb(20, 151, 203);
+    color: rgb(15, 14, 14);
+   }
+   h1{
+    text-align: center;
+   }
